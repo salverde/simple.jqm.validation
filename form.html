@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>simple.jqm.validation</title>   
+<!--
+  <link rel="apple-touch-icon" href="apple-touch-icon-iphone.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-iphone4.png" />> 
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />                                           
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	<script src="simple.jqm.validation.js"></script>
+   
+</head>
+<body>                                      
+	<div data-role="page" id="main">   
+		 
+		<div data-role="header" data-theme="b">
+			<h1>Simple jQueryMobile Validation</h1>			
+		</div>                   
+		
+		<div data-role="content">
+		<h1>A Groovy Form</h1>
+		<p>Please fill out form below to contact a customer service representative. </p>
+
+		<!-- 	Start Contact Form	 -->
+		<form id="contactus" class="validate"> <!-- 	class="validate" method="post" action="contact_action.cfm" -->
+
+			<div data-role="fieldcontain">
+			    <label for="firstname">First Name:</label>
+			    <input type="text" name="first_name" id="first_name" class="required">
+			</div>
+	
+			<div data-role="fieldcontain">
+			    <label for="lastname">Last Name:</label>
+			    <input type="text" name="last_name" id="last_name" class="required">
+			</div>		
+	
+			<div data-role="fieldcontain">
+			    <label for="email">Email:</label>
+			    <input type="text" name="email" id="email" class="required email">
+			</div>		
+	
+			<div data-role="fieldcontain">
+			    <label for="order">Order Number:</label>
+			    <input type="text" name="order" id="order">
+			</div>
+	
+			<div data-role="fieldcontain">
+	   
+			   <select name="reason" id="reason" data-native-menu="false" class="required">
+			      <option value="">Choose Contact Reason</option>
+			      <option value="sales">Sales</option>
+			      <option value="support">Support</option>
+				  <option value="malfunction">Malfunction</option>
+			   </select>
+			</div>
+	
+			<div data-role="fieldcontain">		   	
+				<textarea name="message" id="message" class="required" placeholder="Your valid message..."></textarea>	             
+			</div>		
+	
+			<div data-role="fieldcontain">
+	    
+			    <input type="submit" name="send" id="send" value="Submit" data-theme="b" />
+			</div>		
+		
+		</form> 
+		</div>  <!-- end content -->
+		<!-- <div data-role="footer"></div> -->
+	</div> <!-- end page -->
+	
+	<div data-role="page" id="error_dialog">   
+	
+		<div data-role="header" data-theme="e">
+			<h3>Error</h3>			                
+			
+		</div>		 
+		<div data-role="content" data-theme="d">
+
+			<p>You must fix the following fields. They cannot be blank.</p>
+
+			<a href="#main" data-role="button" data-rel="back" data-theme="e">Dismiss</a> 
+
+		</div>
+
+	</div>
+	           
+</body>
+</html>	
+
+
